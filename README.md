@@ -25,7 +25,7 @@ INSTALLATION :
     Ubuntu 20.04 and other versions of Debian Linux systems comes with python 3 pre installed.
     Make sure the latest version is installed by using 'sudo apt update'.
 
-    to check the current available version type 'python -V' or 'python --version'
+    to check the current available version, type 'python -V' or 'python --version'
     Flask and Requests can be installed via pip using 'pip install [package_name]'.
 
 
