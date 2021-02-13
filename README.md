@@ -2,7 +2,7 @@
 
 The API enables users to filter episodes of the hit TV show 'Silicon Valley' based on various categories.
 
-*Pre-requisites
+* Pre-requisites
     * python 3.7+
     * requests
     * flask
