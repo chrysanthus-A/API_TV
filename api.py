@@ -14,7 +14,7 @@ max_ep={1:8, 2:10, 3:10, 4:10, 5:8, 6:7}        #maximum episodes per season
 #breakpoint()
 
 def jprint(obj):
-    text = json.dumps(obj, sort_keys=True, indent=4) #coverting json obj to text
+    text = json.dumps(obj, sort_keys=True, indent=4)     #coverting json obj to text
     return (text)
 
 def season_error():
@@ -27,16 +27,16 @@ def display(res):
     else:
         return jsonify(res)
 
-
+#home page
 @app.route('/', methods=['GET'])
 def home():
     return '<h1>SILICON VALLEY</h1><p>This site is a prototype API for silicon valley episodes</p><p>refer README for more details.</p>'
-    #home page
 
+# displaying the entire archive in str format
 @app.route('/siliconvalley/all', methods=['GET'])
 def silicon_valley():
     return(jprint(archive['_embedded']))
-    # displaying the entire archive in str format
+
 
 @app.route('/siliconvalley/episodes/title', methods=['GET'])
 def title():
