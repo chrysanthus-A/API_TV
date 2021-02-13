@@ -18,17 +18,17 @@ def jprint(obj):
 def season_error():
     return f'<h3>Silicon valley has only {seasons} seasons </h3>'
 def maxep_error(s):
-    return f'<h3>Season {int(s)} of silicon valley has only {max_ep[int(s)]} episodes </h3>'
+    return f'<h3>Season {s} of silicon valley has only {max_ep[s   ]} episodes </h3>'
 def display(res):
     if len(res) == 0:
-        return '<h3>No results found</h3>'
+        return '<h3>No results found</h3><p>make sure the required parameters are specified</p>'
     else:
         return jsonify(res)
 
 
 @app.route('/', methods=['GET'])
 def home():
-    return '<h1>SILICON VALLEY</h1><p>This site is a prototype API for silicon valley episodes refer READ_ME for more details.</p>'
+    return '<h1>SILICON VALLEY</h1><p>This site is a prototype API for silicon valley episodes</p><p>refer README for more details.</p>'
 
 
 @app.route('/siliconvalley/all', methods=['GET'])
@@ -42,11 +42,11 @@ def title():
     s_no = request.args.get('s', None)
     ep_no  = request.args.get('e', None)
     title = request.args.get('name',None)
-    #breakpoint()
+
     if s_no is not None and (int(s_no)>6):
         return season_error()
     if ep_no is not None and s_no is not None and (int(s_no)<= 6) and (int(ep_no) > max_ep[int(s_no)]):
-        return maxep_error(s_no)
+        return maxep_error(int(s_no))
     else:
         if ep_no is not None and s_no is not None:
             for episode in archive['_embedded']['episodes']:
