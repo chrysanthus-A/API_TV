@@ -7,16 +7,16 @@ app.config["DEBUG"] = True
 
 #get the database from http get requests
 response = requests.get('http://api.tvmaze.com/singlesearch/shows?q=silicon-valley&embed=episodes')
-archive = response.json() # converting the response into JSON format
-seasons = 6 #maximum number of season in silicon valley
-max_ep={1:8, 2:10, 3:10, 4:10, 5:8, 6:7} #maximum episodes per season
+archive = response.json()                    # converting the response into JSON format
+seasons = 6                                  #maximum number of season in silicon valley
+max_ep={1:8, 2:10, 3:10, 4:10, 5:8, 6:7}        #maximum episodes per season
 
 #breakpoint()
 
 def jprint(obj):
     text = json.dumps(obj, sort_keys=True, indent=4) #coverting json obj to text
     return (text)
-    
+
 def season_error():
     return f'<h3>Silicon valley has only {seasons} seasons </h3>'
 def maxep_error(s):
