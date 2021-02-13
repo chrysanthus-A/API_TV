@@ -6,7 +6,7 @@ The API enables users to filter episodes of the hit TV show 'Silicon Valley' bas
     * python 3.7+
     * requests
     * flask
-    * Any http client(google chrome, fire fox, safari)
+    * Any http client (google chrome, fire fox, safari)
 
 INSTALLATION :
 * Windows
