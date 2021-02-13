@@ -10,6 +10,7 @@ The API enables users to filter episodes of the hit TV show 'Silicon Valley' bas
 
 INSTALLATION :
 * Windows
+
     Download the latest version of python from https://www.python.org/downloads/windows/
     after downloading the .exe file, run the installer, make sure you enable 'Add to path' check box.
 
@@ -20,11 +21,12 @@ example: pip install requests
          pip install flask
 
 * Linux
-  Ubuntu 20.04 and other versions of Debian Linux systems comes with python 3 pre installed.
-  Make sure the latest version is installed by using 'sudo apt update'.
 
-  to check the current available version type 'python -V' or 'python --version'
-  Flask and Requests can be installed via pip using 'pip install [package_name]'.
+    Ubuntu 20.04 and other versions of Debian Linux systems comes with python 3 pre installed.
+    Make sure the latest version is installed by using 'sudo apt update'.
+
+    to check the current available version type 'python -V' or 'python --version'
+    Flask and Requests can be installed via pip using 'pip install [package_name]'.
 
 
 USAGE:
