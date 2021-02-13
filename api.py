@@ -2,8 +2,9 @@ import flask, json, requests
 from flask import request, jsonify
 
 
-app = flask.Flask(__name__)
+app = flask.Flask('siliconvalley')
 app.config["DEBUG"] = True
+
 
 response = requests.get('http://api.tvmaze.com/singlesearch/shows?q=silicon-valley&embed=episodes')
 archive = response.json()
@@ -12,9 +13,7 @@ max_ep={1:8, 2:10, 3:10, 4:10, 5:8, 6:7} #maximum episodes per season
 #breakpoint()
 
 def jprint(obj):
-    # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
-    #breakpoit()
     return (text)
 def season_error():
     return f'<h3>Silicon valley has only {seasons} seasons </h3>'
@@ -79,4 +78,5 @@ def count():
                     ep_count.append(episode['name'])
     #breakpoint()
     return display(ep_count)
+
 app.run()
