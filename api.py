@@ -18,7 +18,7 @@ def jprint(obj):
 def season_error():
     return f'<h3>Silicon valley has only {seasons} seasons </h3>'
 def maxep_error(s):
-    return f'<h3>Season {s} of silicon valley has only {max_ep[s   ]} episodes </h3>'
+    return f'<h3>Season {s} of silicon valley has only {max_ep[s]} episodes </h3>'
 def display(res):
     if len(res) == 0:
         return '<h3>No results found</h3><p>make sure the required parameters are specified</p>'
